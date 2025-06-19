@@ -4,9 +4,11 @@ import MainContent from "./MainContent";
 import DashboardCard from "./DashboardCard";
 import PageVisits from "./PageVisits";
 import TotalOrdersChart from "./TotalOrdersChart";
+import Footer from "./footer";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
+  
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -61,6 +63,7 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
+      
 
       {/* Main Content */}
       <div className="flex-grow-1 p-3">
@@ -69,7 +72,10 @@ const Sidebar = () => {
         </button>
         <MainContent />
         <DashboardCard/>
-        <PageVisits/><TotalOrdersChart></TotalOrdersChart>
+        <PageVisits/>
+        <TotalOrdersChart/>
+        <Footer></Footer>
+        
         
       </div>
     </div>
